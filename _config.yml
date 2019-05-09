@@ -1,17 +1,17 @@
 # Built with Jekyll 3.2.0
 
 # Setup
-title:               Ed.
-tagline:             'a jekyll theme for minimal editions'
-description:         'Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
+title:               Km.
+tagline:             '知识及注意力管理社群'
+description:         'Km 不仅仅针对知识以及其载体, 更加关注使用/生产/传播知识的人以及组织以及过程中注意力消耗的规模.'
 #url:                 'http://minicomp.github.io'
 baseurl:             '/km'
 
 # About/contact
 author:
-  name:              Alex Gil
-  url:               https://twitter.com/elotroalex
-  email:             colibri.alex@gmail.com
+  name:              DAMA
+  url:               https://github.com/ZoomQuiet
+  email:             zoomquiet+km@gmail.com
 
 # Color scheme. Options: red, orange, magenta, cyan, blue, brown
 color-scheme:
