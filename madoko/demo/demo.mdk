@@ -1,0 +1,212 @@
+[INCLUDE=presentation]
+Title         : [测试演示文稿<br>利用 Madoko 制作]{ line-height=1.2em }
+Sub Title     : 同时支持 HTML 和 PDF
+Author        : pimgeek
+Affiliation   : 【集智】注意力与知识管理群
+Email         : wudi.biz (at) gmail
+Reveal Theme  : sky
+Beamer Theme  : singapore
+
+.madoko { html-lang: zh-Hans-CN; }
+
+
+[TITLE]
+
+# 演示要点
+
+[TOC]
+
+# 利用 Madoko 创建演示文稿
+
+用 [Madoko] 可以轻松地创建美观大方的演示文稿.
+
+* [HTML 格式][slide]:
+  利用由 [Hakim El Hattab](http://hakim.se) 开发的 `Reveal.js` 库实现. \
+  这个基于 Madoko 的演示文稿就是利用来自他的在线演示改编而成.
+
+* [PDF 格式][slide-pdf]:
+  使用 LaTeX 专用的 `Beamer` 工具包实现.
+* [Source][slide-mdk]:
+  点击这里可以看到本演示文稿的源代码
+
+[madoko]: http://madoko.codeplex.com
+
+## Reveal.js
+
+`reveal.js` 是一个前端框架, 可以用它轻松创建基于 HTML 的美观大方的演示文稿. 
+你需要一个支持 CSS 3D 转换效果的浏览器，才能看到它最完整的酷炫效果.
+
+每一项 Madoko 的特有功能也可以工作. 下面是一些数学公式:
+
+~ Begin Framed { padding:1ex; margin-top:1ex }
+一个非常著名的公式是 $e = mc^2$, 但下面这个也很著名: 
+
+~ Equation  { #eq-gaussian }
+\int_{-\infty}^\infty e^{-a x^2} d x = \sqrt{\frac{\pi}{a}} 
+~
+~ End Framed
+
+~~ Notes
+嘿, 这里有一些笔记. 它们将隐藏在您的演示文稿中, 但如果你打开演讲者备注窗口(在键盘上点击"s"), 就可以看到它们.
+~~
+
+## Code
+
+这里有一些代码, Madoko 对它们做了高亮.
+
+``` javascript
+function sqr( x ) {
+  var \(&pi;\) = 3.141593;
+  return x*x;  /* 求 x 的平方 */
+}
+```
+我们使用 `\(` 和 `\)` 跳回到 Markdown 语法写出 &pi; 这个符号.
+
+<!-- Example of nested vertical slides -->
+~ Begin Vertical { data-background:Gainsboro }
+
+## 垂直的演示页面 { #vertical }
+演示页面可以被嵌套在其他的演示页面里, 试着按 ↓ 按键.
+
+[![arrowdown]][down]
+
+[down]: # { .navigate-down }
+[arrowdown]: images/arrow.png "向下的箭头" { display:block; margin:auto; width:178px; height:238px }
+
+## 地下 1 层
+按 ↓ 或 ↑ 按键进行导航.
+
+## 地下 2 层
+
+使用 `columns` 可以实现内容块并列摆放:
+
+~ Begin Columns
+~ Column { width:50% }
+一只黑脉金斑蝶 (见右侧)
+在墨西哥过冬.
+~
+~ Column
+![butterfly]
+~
+~ End Columns
+
+[butterfly]: images/butterfly.png "一只黑脉金斑蝶" { width:280px; vertical-align:middle }
+
+<!-- 
+对于本地背景图像, 我们需要对图像进行引用, 以使其数据嵌入到 HTML 页面中.
+我们使用 "display=none" 定义它, 因此它隐藏在演示文稿中. 
+然后我们就可以使用 "data-background-image" 来引用该图像.
+-->
+
+![bfly]
+[bfly]: images/butterfly.png "一只黑脉金斑蝶" { display:none }
+
+## 地下 3 层 { data-background-image:images/butterfly.png; data-background-size:250px; }
+
+就是这样, 该返回第一层了.
+
+[![arrowup]][back2]
+
+[arrowup]:  images/arrow.png "向上的箭头" { width:178px; height:238px; transform:rotate(180deg) }
+[back2]:    #vertical { .image }
+
+~ End Vertical
+
+## Themes {#themes}
+
+`Reveal.js` 有这样一些内置的主题:
+
+* [Default](?#/themes)
+* [Sky](?theme=sky#/themes)
+* [Beige](?theme=beige#/themes)
+* [Serif](?theme=serif#/themes)
+* [Simple](?theme=simple#/themes)
+* [Night](?theme=night#/themes)
+* [Moon](?theme=moon#/themes)
+* [Solarized](?theme=solarized#/themes)
+
+在开始演示后点击上面的主题链接将会导致闪烁. 
+在生产环境中, 你应该使用 `<link>` 在 `<head>` 中加载你的主题.
+
+## 翻页动画效果 { #transitions }
+
+你可以选择不同的翻页动画效果, 例如:
+
+[Cube](?transition=cube#/transitions) -
+[Page](?transition=page#/transitions) -
+[Concave](?transition=concave#/transitions) -
+[Zoom](?transition=zoom#/transitions) -
+[Linear](?transition=linear#/transitions) -
+[Fade](?transition=fade#/transitions) -
+[None](?transition=none#/transitions) -
+[Default](?#/transitions)
+
+
+
+## ... 停顿?
+
+可以引入停顿效果.
+
+* {.fragment} 第一点
+* {.fragment} 第二点
+* {.fragment} 第三点
+
+还可以设置更多停顿:
+
+- 测试 1
+- 测试 2
+- 测试 3
+{.fragmented}
+
+很酷吧!
+
+
+~ Slide
+不带标题的演示页面.
+~
+
+## Point of View
+
+In Reveal.js Press **ESC** to enter the slide overview.
+
+Hold down alt and click on any element to zoom in on it using 
+ [zoom.js]. Alt + click anywhere to zoom back out.
+
+
+[zoom.js]: http://lab.hakim.se/zoom-js
+
+
+## Works in Mobile Safari
+
+Try it out! You can swipe through the slides and pinch your way to the
+overview.
+
+
+## Printing
+
+You can print a `revealjs` presentation nicely from the browser.
+
+First give the `?print-pdf` or `?print-paper` query on your final
+presentation (in the browser address bar) and then print from the Chrome
+browser selecting `Save to PDF`.
+
+Read more about it at the [revealjs documentation](https://github.com/hakimel/reveal.js#pdf-export)
+
+## RevealJS library
+
+Normally, the `revealjs` library is loaded from a CDN but you can specify your
+own url using metadata:
+
+    Reveal Url: <my url>
+
+This can be useful when using a [server to run revealjs](https://github.com/hakimel/reveal.js#full-setup)
+where you may use something like:
+
+    @nopreview Reveal Url: http://localhost:8000/reveal.js
+
+
+## Thanks for looking :-)
+
+[slide]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.html
+[slide-mdk]: https://www.madoko.net/editor.html?#url=http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/slidedemo.mdk&options={"delayedUpdate":"true"}
+[slide-pdf]: http://research.microsoft.com/en-us/um/people/daan/madoko/samples/slidedemo/out/slidedemo.pdf
