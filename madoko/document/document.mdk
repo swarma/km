@@ -8,7 +8,6 @@ Reveal Theme  : sky
 Beamer Theme  : singapore
 
 .madoko { html-lang: zh-Hans-CN; }
-Package: ctex
 
 [TITLE]
 
@@ -39,9 +38,9 @@ Package: ctex
 每一项 Madoko 的特有功能也可以工作. 下面是一些数学公式:
 
 ~ Begin Framed { padding:1ex; margin-top:1ex }
-一个非常著名的公式是 $e = mc^2$, 但下面的这个也很著名: 
+一个非常著名的公式是 $e = mc^2$, 但下面这个也很著名: 
 
-~ Equation  {#eq-gaussian}
+~ Equation  { #eq-gaussian }
 \int_{-\infty}^\infty e^{-a x^2} d x = \sqrt{\frac{\pi}{a}} 
 ~
 ~ End Framed
@@ -143,7 +142,7 @@ function sqr( x ) {
 
 
 
-## ...停顿?
+## ... 停顿?
 
 可以引入停顿效果.
 
