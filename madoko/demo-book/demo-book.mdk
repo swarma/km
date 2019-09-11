@@ -1,0 +1,103 @@
+Title           : 集智结构化知识论.v0
+Author          : 【集智】注意力与知识管理群
+Affiliation     : <http://www.swarma.org>
+Email           : wudi.biz (at) gmail
+Bibliography    : example.bib
+Name-References : 参考文献
+Name-Lemma      : 定理
+Name-Figure     : 图表
+Name-Todo       : 待办
+
+.madoko { html-lang: zh-Hans-CN; }
+
+[INCLUDE=book]
+[INCLUDE=webtoc]
+[INCLUDE=webanchors]
+
+[TITLE]
+
+~ Begin SidePanel
+[TOC]
+~ End SidePanel
+
+~ Begin MainPanel
+
+# 引论     { #sec-intro }
+
+开始一个子章节
+
+## 简短回顾
+
+章节 [#sec-intro] 中的图表 [#fig-butterfly] 展示了一只帝王蝶。
+
+你可以通过将图像拖放到编辑器窗格的方式将其包含在文档中，
+对 BibTeX 文件、LaTeX 样式文件等也可做类似处理。
+
+为了避免提交二进制文件到 GitHub 版本库，
+建议使用七牛/阿里云等图床上传图片，然后用链接方式引用图片。 
+
+~ Figure { #fig-butterfly; caption:"一只帝王蝶"; page-align:top}
+![butterfly]
+~
+
+[butterfly]: images/butterfly.png "一只蝴蝶" { width:8em }
+
+我们的贡献有以下几方面:
+
+* 一张 _帝王蝶_ 的图片;
+* 讨论了以下问题
+  * **什么是知识结构化?**
+* 添加了一些 **数学公式**;
+* 一些 `源代码`;
+* And references to Tex books [@Knuth:TeX;@Lamport:LaTeX;@Goo93;@Fberg04] and others [@Grandstrand].
+
+
+# 正文部分
+
+自然对数的底 $e$ 可以被以下公式定义 [#euler]:
+
+~ Equation { #euler }
+e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+~
+
+下面写一小段 Javascript 代码:
+
+``` javascript
+function hello() {
+  return "hello world!"
+}
+```
+~ Todo 
+完成相关的证明工作
+~
+
+## 要点一
+
+
+## 要点二
+
+    for i:=maxint to 0 do
+    begin 
+        j:=square(root(i));
+    end;
+
+
+## 描述
+
+
+~ Lemma { caption:"另一个定理" }
+  
+我是一条定理
+~
+
+
+[BIB]
+
+
+&pagebreak;
+
+# 附录内容 { @h1:"A" }
+
+* 我是一条附录内容
+
+~ End MainPanel
