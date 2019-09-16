@@ -1,9 +1,9 @@
 # Built with Jekyll 3.2.0
 
 # Setup
-title:               Km.
+title:               KM
 tagline:             '知识及注意力管理社群'
-description:         'Km 不仅仅针对知识以及其载体, 更加关注使用/生产/传播知识的人以及组织以及过程中注意力消耗的规模.'
+description:         'KM 不仅仅针对知识以及其载体, 更加关注使用/生产/传播知识的人以及组织以及过程中注意力消耗的规模.'
 #url:                 'http://minicomp.github.io'
 baseurl:             '/km'
 
