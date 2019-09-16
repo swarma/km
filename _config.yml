@@ -42,6 +42,7 @@ kramdown:
 
 # Exclusions from the final site
 exclude:
+  - old_theme_files
   - optional
   - vendor
 
