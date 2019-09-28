@@ -1,11 +1,3 @@
----
-layout: poem
-title: A Julia de Burgos
-author: Julia de Burgos
-editor: Alex Gil
-source: Ciudad Seva
----
-
 - Ya las gentes murmuran que yo soy tu enemiga
 - porque dicen que en verso doy al mundo mi yo.
 
